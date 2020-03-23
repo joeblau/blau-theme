@@ -58,6 +58,24 @@ header, footer {
   text-align: center;
 }
 
+header > div > picture > source,
+header > div > picture > img {
+  object-fit: scale-down;
+  width: 80%;
+  max-height: 80%;
+}
+
+footer > ul {
+  display: inline-block;
+  padding: 0;
+}
+
+footer > ul > li {
+  display: inline;
+  padding: 1em;
+  float: left;
+}
+
 h1 {
   font-size: 5rem;
   line-height: 1.05;
@@ -101,8 +119,7 @@ h6 {
 }
 
 small {
-  font-size: 0.5rem;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 p {
@@ -132,10 +149,34 @@ section {
   margin: auto;
 }
 
+section > h1,
+section > h2,
+section > h3,
+section > h4,
+section > h5,
+section > h6 {
+  text-align: center;
+}
+
 .icon {
   font-family: ".SF Symbols Fallback";
 }
 
+.three-wide {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+  padding: 2em;
+}
+
+@media (min-width: 768px) {
+  .three-wide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    padding: 2em;
+  }
+}
 .system-pink {
   color: var(--system-pink);
 }

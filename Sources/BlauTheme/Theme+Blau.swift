@@ -42,6 +42,7 @@ public extension Theme where Site: BlauThemable {
                 .body(
                     .header(for: context.site),
                     .main(
+                        .features(for: context.site),
                         .callToAction(for: context.site)
                     ),
                     .footer(for: context.site)
@@ -97,12 +98,9 @@ public extension Theme where Site: BlauThemable {
         }
         
         func buildStyleSheettPaths<T: BlauThemable>(for site: T) -> [Path] {
-            var templateStyleSheets = [
+            let templateStyleSheets = [
                 Path("/blau-styles.css"),
                 Path("/sfsymbols-font-stylesheet.css")]
-            if let css = site.css {
-                templateStyleSheets.append(Path(css))
-            }
             return templateStyleSheets
         }
     }

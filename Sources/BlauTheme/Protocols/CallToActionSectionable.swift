@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol CallToActionSectionable: Sectionable {
-    var callToActionImageLink: ImageLink? { get set }
+    var callToActionImageLink: ImageLinkable? { get set }
 }

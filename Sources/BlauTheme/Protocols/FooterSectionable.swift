@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol FooterSectionable: Sectionable {
-    var navigationLinks: [TextLink] { get set }
+    var navigationLinks: [TextLinkable] { get set }
     var copyright: String { get set }
 }

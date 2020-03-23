@@ -14,14 +14,11 @@ extension Node where Context == HTML.BodyContext {
             return .empty
         }
         return .footer(
-            .a(.href("/"), .text("Home")),
-            .forEach(footer.navigationLinks) { link in
-                .text(" • ")
-//                .a(.href(link.path), .text(link.text))
-            },
+            .ul(.forEach(footer.navigationLinks) { link in
+                .li(.a(.href(link.url.absoluteURL), .text(link.text)))
+            }),
             .br(),
             .element(named: "small", text: footer.copyright)
         )
-
     }
 }

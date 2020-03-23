@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol HeroSectionable: Sectionable {
-    var callToActionImageLink: ImageLink? { get set }
-    var image: AppearnaceURL? { get set }
+    var callToActionImageLink: ImageLinkable? { get set }
+    var image: AppearanceURLable? { get set }
     var backgroundImage: URL?  { get set }
 }

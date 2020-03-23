@@ -10,20 +10,20 @@ import Plot
 
 extension Node where Context == HTML.BodyContext {
     static func header<T: BlauThemable>(for site: T) -> Node {
-        guard let hero = site.hero else {
+        guard let header = site.header else {
             return .empty
         }
-        return header(
-            .unwrap(hero.title) {
+        return .header(
+            .unwrap(header.title) {
                 .h1(.text($0))
             },
-            .unwrap(hero.subtitle) {
+            .unwrap(header.subtitle) {
                 .h3(.text($0))
             },
-            .unwrap(hero.callToActionImageLink, {
+            .unwrap(header.callToActionImageLink, {
                 appleStoreLink(for: $0)
             }),
-            .unwrap(hero.image, {
+            .unwrap(header.image, {
                 .div(
                     .picture(
                         .source(
