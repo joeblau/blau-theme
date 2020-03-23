@@ -8,15 +8,16 @@ let package = Package(
     products: [
         .library(
             name: "BlauTheme",
-            targets: ["BlauTheme"]),
+            targets: ["BlauTheme"]
+        ),
     ],
     dependencies: [
-        .package(url: "https://github.com/johnsundell/publish.git", from: "0.1.0")
+        .package(url: "https://github.com/johnsundell/publish.git", from: "0.1.0"),
     ],
     targets: [
         .target(
             name: "BlauTheme",
             dependencies: ["Publish"]
-        )
+        ),
     ]
 )

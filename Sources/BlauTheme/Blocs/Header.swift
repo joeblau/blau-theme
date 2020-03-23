@@ -1,12 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 3/22/20.
-//
+// Header.swift
+// Copyright (c) 2020 Joe Blau
 
-import Publish
 import Plot
+import Publish
 
 extension Node where Context == HTML.BodyContext {
     static func header<T: BlauThemable>(for site: T) -> Node {
@@ -20,10 +16,10 @@ extension Node where Context == HTML.BodyContext {
             .unwrap(header.subtitle) {
                 .h3(.text($0))
             },
-            .unwrap(header.callToActionImageLink, {
+            .unwrap(header.callToActionImageLink) {
                 appleStoreLink(for: $0)
-            }),
-            .unwrap(header.image, {
+            },
+            .unwrap(header.image) {
                 .div(
                     .picture(
                         .source(
@@ -35,7 +31,7 @@ extension Node where Context == HTML.BodyContext {
                         )
                     )
                 )
-            })
+            }
         )
     }
 }

@@ -1,12 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 3/22/20.
-//
+// CallToAction.swift
+// Copyright (c) 2020 Joe Blau
 
-import Publish
 import Plot
+import Publish
 
 extension Node where Context == HTML.BodyContext {
     static func callToAction<T: BlauThemable>(for site: T) -> Node {

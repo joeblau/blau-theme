@@ -1,12 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 3/22/20.
-//
+// Features.swift
+// Copyright (c) 2020 Joe Blau
 
-import Publish
 import Plot
+import Publish
 
 extension Node where Context == HTML.BodyContext {
     static func features<T: BlauThemable>(for site: T) -> Node {
@@ -22,7 +18,7 @@ extension Node where Context == HTML.BodyContext {
             },
             .div(
                 .class("three-wide"),
-                .forEach(features.list, { (item: BulletPointable) -> Node<HTML.BodyContext> in
+                .forEach(features.list) { (item: BulletPointable) -> Node<HTML.BodyContext> in
                     .div(
                         .h3(
                             .unwrap(item.symbol) {
@@ -44,7 +40,7 @@ extension Node where Context == HTML.BodyContext {
                             )
                         }
                     )
-                })
+                }
             )
         )
     }

@@ -1,18 +1,14 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 3/22/20.
-//
+// AppleStoreLink.swift
+// Copyright (c) 2020 Joe Blau
 
 import Foundation
 
-import Publish
 import Plot
+import Publish
 
 extension Node where Context == HTML.BodyContext {
     static func appleStoreLink(for imageLink: ImageLinkable) -> Node {
-        return .element(named: "center", nodes: [
+        .element(named: "center", nodes: [
             .a(
                 .href(imageLink.url.absoluteString),
                 .picture(
@@ -24,7 +20,7 @@ extension Node where Context == HTML.BodyContext {
                         .src(imageLink.image.light.path)
                     )
                 )
-            )
+            ),
         ])
     }
 }

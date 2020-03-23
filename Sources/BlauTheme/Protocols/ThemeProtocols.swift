@@ -1,13 +1,9 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 1/11/20.
-//
+// ThemeProtocols.swift
+// Copyright (c) 2020 Joe Blau
 
 import Foundation
-import Publish
 import Plot
+import Publish
 
 public protocol AppearanceURLable {
     var light: URL { get set }

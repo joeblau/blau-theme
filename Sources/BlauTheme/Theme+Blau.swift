@@ -1,12 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 1/8/20.
-//
+// Theme+Blau.swift
+// Copyright (c) 2020 Joe Blau
 
-import Publish
 import Plot
+import Publish
 
 public enum PublishError: Error {
     case castSiteError
@@ -17,21 +13,20 @@ public extension Theme where Site: BlauThemable {
     static var blau: Self {
         Theme(htmlFactory: StevenPaulJobsHTMLFactory(),
               resourcePaths: [
-                "Resources/BlauTheme/css/blau-styles.css",
-                "Resources/BlauTheme/fonts/sfsymbols-font-stylesheet.css",
-                "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.eot",
-                "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.svg",
-                "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.ttf",
-                "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.woff",
-                "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.woff2"
-            ]
-        )
+                  "Resources/BlauTheme/css/blau-styles.css",
+                  "Resources/BlauTheme/fonts/sfsymbols-font-stylesheet.css",
+                  "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.eot",
+                  "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.svg",
+                  "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.ttf",
+                  "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.woff",
+                  "Resources/BlauTheme/fonts/SFSymbolsFallback-Regular.woff2",
+              ])
     }
-    
+
     internal struct StevenPaulJobsHTMLFactory: HTMLFactory {
         func makeIndexHTML(for index: Index,
                            context: PublishingContext<Site>) throws -> HTML {
-            return HTML(
+            HTML(
                 .lang(context.site.language),
                 .head(for: index,
                       on: context.site,
@@ -49,20 +44,20 @@ public extension Theme where Site: BlauThemable {
                 )
             )
         }
-        
-        func makeSectionHTML(for section: Section<Site>,
-                             context: PublishingContext<Site>) throws -> HTML {
-            return HTML()
+
+        func makeSectionHTML(for _: Section<Site>,
+                             context _: PublishingContext<Site>) throws -> HTML {
+            HTML()
         }
-        
-        func makeItemHTML(for item: Item<Site>,
-                          context: PublishingContext<Site>) throws -> HTML {
-            return HTML()
+
+        func makeItemHTML(for _: Item<Site>,
+                          context _: PublishingContext<Site>) throws -> HTML {
+            HTML()
         }
-        
+
         func makePageHTML(for page: Page,
                           context: PublishingContext<Site>) throws -> HTML {
-            return HTML(
+            HTML(
                 .lang(context.site.language),
                 .head(for: page,
                       on: context.site,
@@ -71,7 +66,6 @@ public extension Theme where Site: BlauThemable {
                       rssFeedPath: .defaultForRSSFeed,
                       rssFeedTitle: nil),
                 .body(
-                    
                     .header(
                         .h1(.text(page.title)),
                         .h3(.text(page.description))
@@ -86,21 +80,22 @@ public extension Theme where Site: BlauThemable {
                 )
             )
         }
-        
-        func makeTagListHTML(for page: TagListPage,
-                             context: PublishingContext<Site>) throws -> HTML? {
-            return HTML()
+
+        func makeTagListHTML(for _: TagListPage,
+                             context _: PublishingContext<Site>) throws -> HTML? {
+            HTML()
         }
-        
-        func makeTagDetailsHTML(for page: TagDetailsPage,
-                                context: PublishingContext<Site>) throws -> HTML? {
-            return HTML()
+
+        func makeTagDetailsHTML(for _: TagDetailsPage,
+                                context _: PublishingContext<Site>) throws -> HTML? {
+            HTML()
         }
-        
-        func buildStyleSheettPaths<T: BlauThemable>(for site: T) -> [Path] {
+
+        func buildStyleSheettPaths<T: BlauThemable>(for _: T) -> [Path] {
             let templateStyleSheets = [
                 Path("/blau-styles.css"),
-                Path("/sfsymbols-font-stylesheet.css")]
+                Path("/sfsymbols-font-stylesheet.css"),
+            ]
             return templateStyleSheets
         }
     }

@@ -1,9 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joe Blau on 3/22/20.
-//
+// CallToActionSectionable.swift
+// Copyright (c) 2020 Joe Blau
 
 import Foundation
 
