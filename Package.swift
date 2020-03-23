@@ -4,18 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "StevenPaulJobsTheme",
+    name: "BlauTheme",
     products: [
         .library(
-            name: "StevenPaulJobsTheme",
-            targets: ["StevenPaulJobsTheme"]),
+            name: "BlauTheme",
+            targets: ["BlauTheme"]),
     ],
     dependencies: [
         .package(url: "https://github.com/johnsundell/publish.git", from: "0.1.0")
     ],
     targets: [
         .target(
-            name: "StevenPaulJobsTheme",
+            name: "BlauTheme",
             dependencies: ["Publish"]
         )
     ]

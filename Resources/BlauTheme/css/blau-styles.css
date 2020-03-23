@@ -1,0 +1,199 @@
+:root {
+  --system-label: #000000;
+  --system-background: #ffffff;
+  --system-hyperlink: #249eff;
+  --system-pink: #ff2d55;
+  --system-red: #ff3b30;
+  --system-orange: #ff9500;
+  --system-yellow: #ffcc00;
+  --system-green: #34be59;
+  --system-teal: #5ac8fa;
+  --system-blue: #007aff;
+  --system-indigo: #5856d6;
+  --system-purple: #af52de;
+  --system-gray: #8e8e93;
+  --system-gray2: #aeaeb2;
+  --system-gray3: #c7c7cc;
+  --system-gray4: #d1d1d6;
+  --system-gray5: #e5e5ea;
+  --system-gray6: #f2f2f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --system-label: #ffffff;
+    --system-background: #000000;
+    --system-hyperlink: #3aa8ff;
+    --system-pink: #ff375f;
+    --system-red: #ff453a;
+    --system-orange: #ff9f0a;
+    --system-yellow: #ffd60a;
+    --system-green: #30d158;
+    --system-teal: #64d2ff;
+    --system-blue: #0a84ff;
+    --system-indigo: #5e5ce6;
+    --system-purple: #bf5af2;
+    --system-gray: #8e8e93;
+    --system-gray2: #636366;
+    --system-gray3: #48484a;
+    --system-gray4: #3a3a3c;
+    --system-gray5: #2c2c2e;
+    --system-gray6: #1c1c1e;
+  }
+}
+body {
+  background-color: var(--system-background);
+  color: var(--system-label);
+  font-size: 16px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 0px;
+}
+
+header, footer {
+  grid-column: span 2;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+}
+
+h4 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.003em;
+}
+
+h5 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+
+small {
+  font-size: 0.5rem;
+  opacity: 0.7;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+}
+
+a {
+  color: var(--system-hyperlink);
+  line-height: 1.42115;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  max-width: 980px;
+  margin: auto;
+}
+
+.icon {
+  font-family: ".SF Symbols Fallback";
+}
+
+.system-pink {
+  color: var(--system-pink);
+}
+
+.system-red {
+  color: var(--system-red);
+}
+
+.system-orange {
+  color: var(--system-orange);
+}
+
+.system-yellow {
+  color: var(--system-yellow);
+}
+
+.system-green {
+  color: var(--system-green);
+}
+
+.system-teal {
+  color: var(--system-teal);
+}
+
+.system-blue {
+  color: var(--system-blue);
+}
+
+.system-indigo {
+  color: var(--system-indigo);
+}
+
+.system-purple {
+  color: var(--system-purple);
+}
+
+.system-gray {
+  color: var(--system-gray);
+}
+
+.system-gray2 {
+  color: var(--system-gray2);
+}
+
+.system-gray3 {
+  color: var(--system-gray3);
+}
+
+.system-gray4 {
+  color: var(--system-gray4);
+}
+
+.system-gray5 {
+  color: var(--system-gray5);
+}
+
+.system-gray6 {
+  color: var(--system-gray6);
+}
+
+/*# sourceMappingURL=blau-styles.css.map */

@@ -1,3 +1,3 @@
-# StevenPaulJobsTheme
+# Blau Theme
 
-A description of this package.
+My Publish Theme
